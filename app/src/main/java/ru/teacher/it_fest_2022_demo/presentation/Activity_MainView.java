@@ -13,7 +13,7 @@ import com.yandex.mapkit.map.CameraPosition;
 import com.yandex.mapkit.mapview.MapView;
 
 import ru.teacher.it_fest_2022_demo.R;
-import ru.teacher.it_fest_2022_demo.api.API_YandexMapKit_Config;
+import ru.teacher.it_fest_2022_demo.api.Geo_Config;
 
 public class Activity_MainView extends AppCompatActivity {
 
@@ -42,8 +42,8 @@ public class Activity_MainView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_view);
         parseIntent();
-        mapview = (MapView) findViewById(R.id.mapview);
-        Point ekb = new Point(API_YandexMapKit_Config.EKB_LAT, API_YandexMapKit_Config.EKB_LON);
+        mapview = findViewById(R.id.mapview);
+        Point ekb = new Point(Geo_Config.EKB_LAT, Geo_Config.EKB_LON);
         mapview.getMap().move(
                 new CameraPosition(ekb, 11.0f, 0.0f, 0.0f),
                 new Animation(Animation.Type.SMOOTH, 0),

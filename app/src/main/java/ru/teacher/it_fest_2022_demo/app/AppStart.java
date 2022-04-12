@@ -4,7 +4,7 @@ import android.app.Application;
 
 import com.yandex.mapkit.MapKitFactory;
 
-import ru.teacher.it_fest_2022_demo.api.API_YandexMapKit_Config;
+import ru.teacher.it_fest_2022_demo.api.API_Yandex_Key;
 
 public class AppStart extends Application {
 
@@ -15,7 +15,7 @@ public class AppStart extends Application {
     }
 
     private void initMapKit() {
-        MapKitFactory.setApiKey(API_YandexMapKit_Config.API_MAP_KIT_KEY);
+        MapKitFactory.setApiKey(API_Yandex_Key.API_MAPS_KIT_KEY);
         MapKitFactory.initialize(this);
     }
 }
